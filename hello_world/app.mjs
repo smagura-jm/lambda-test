@@ -12,9 +12,12 @@
  */
 
 export const lambdaHandler = async (event, context) => {
+  console.log("GOT EVENT:");
+  console.log(event);
+
   const response = {
     statusCode: 200,
-    body: event.body,
+    body: `success!!! ${JSON.stringify(event)}`,
   };
 
   return response;
